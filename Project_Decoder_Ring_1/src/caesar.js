@@ -10,22 +10,7 @@ function mod(n, p) {
 
 const caesarModule = (function () {
     // you can add any code you want within this function scope
-    function caesar(input, shift, encode = true) {
-        if (!encode) shift = -shift;
-        input = input.toLowerCase(); //macking input text all lowercase
-        let encodeMessage = "";
-        for (let i = 0; i < input.length; i++) {
-            let ucode = input.charCodeAt(i);
-            if (ucode >= 97 && ucode <= 122) {
-                //97 = a, 122 = z
-                ucode -= 97;
-                ucode = mod(ucode + shift, 26);
-                ucode += 97;
-            }
-            encodeMessage += String.fromCharCode(ucode);
-        }
-        return encodeMessage;
-    }
+    function caesar(input, shift, encode = true) {}
 
     return {
         caesar,
