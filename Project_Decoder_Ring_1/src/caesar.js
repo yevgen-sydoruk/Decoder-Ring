@@ -11,6 +11,8 @@ function mod(n, p) {
 const caesarModule = (function () {
     // you can add any code you want within this function scope
     function caesar(input, shift, encode = true) {
+        if (shift === 0 || shift === undefined || shift < -25 || shift > 25)
+            return false;
         if (!encode) shift = -shift;
         input = input.toLowerCase(); //macking input text all lowercase
         let encodeMessage = "";
